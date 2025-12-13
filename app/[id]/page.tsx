@@ -5,6 +5,7 @@ import { cookies } from "next/headers";
 async function page({ params }: { params: Params }) {
   const param = await params;
   const id = (await cookies()).get("id")?.value;
+  const chatId = param.id;
 
   return <ChatContainer id={id} chatId={chatId} />;
 }
