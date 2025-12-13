@@ -7,7 +7,7 @@ async function page({ params }: { params: Params }) {
   const id = (await cookies()).get("id")?.value;
   const chatId = param.id;
 
-  return <ChatContainer id={id} chatId={chatId} />;
+  return <ChatContainer id={Number(id)} chatId={Number(chatId)} />;
 }
 
 export default page;

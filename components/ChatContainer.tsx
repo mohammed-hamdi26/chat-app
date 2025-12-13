@@ -4,7 +4,7 @@ import ChatForm from "./ChatForm";
 import MessageContainer from "./MessageContainer";
 import { socket } from "@/app/socket";
 
-function ChatContainer({ id, chatId }: { id: string; chatId: string }) {
+function ChatContainer({ id, chatId }: { id: number; chatId: number }) {
   const [isConnected, setIsConnected] = useState(false);
   const [message, setMessage] = useState("");
   const roomId = id > chatId ? `${id}-${chatId}` : `${chatId}-${id}`;

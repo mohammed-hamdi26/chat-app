@@ -1,6 +1,16 @@
 import { socket } from "@/app/socket";
 
-function ChatForm({ value, setValue, id, roomId }) {
+function ChatForm({
+  value,
+  setValue,
+  id,
+  roomId,
+}: {
+  value: string;
+  setValue: React.Dispatch<React.SetStateAction<string>>;
+  id: number;
+  roomId: string;
+}) {
   return (
     <form
       onSubmit={(e) => {
