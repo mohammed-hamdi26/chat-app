@@ -25,15 +25,13 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const userId = Math.floor(Math.random() * 25);
-  console.log(userId);
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex h-dvh  `}
       >
         <CookiesProvider>
-          <SideChats idUser={userId} />
+          <SideChats />
           <main className="flex-1 h-dvh">{children}</main>
         </CookiesProvider>
       </body>
