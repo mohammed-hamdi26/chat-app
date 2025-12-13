@@ -4,11 +4,11 @@ import ChatForm from "./ChatForm";
 import MessageContainer from "./MessageContainer";
 import { socket } from "@/app/socket";
 
-function ChatContainer({ id, chatId }) {
+function ChatContainer({ id, chatId }: { id: string; chatId: string }) {
   const [isConnected, setIsConnected] = useState(false);
   const [message, setMessage] = useState("");
   const roomId = id > chatId ? `${id}-${chatId}` : `${chatId}-${id}`;
-  const [isOnline, setIsOnline] = useState(false);
+  // const [isOnline, setIsOnline] = useState(false);
   console.log(roomId);
   useEffect(() => {
     if (socket.connected) {
